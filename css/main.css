@@ -1,0 +1,276 @@
+@font-face {
+    font-family: Boon;
+    src: url(Boon-Regular.ttf);
+}
+
+html, body {
+  height: 100%;
+  font-family: Boon;
+  font-size: 12pt;
+  line-height: 1.5em;
+}
+
+.fill-height {
+  height:100%;
+  min-height:100%;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+li > a {
+  color: #FFFFFF !important;
+}
+
+li.active > a {
+  background-color: #2875b7 !important;
+}
+
+.navbar-toggle {
+  background-color: #428bca !important;
+  border-color: #FFFFFF !important;
+}
+
+.navbar-toggle:hover {
+  background-color: #2875b7 !important;
+}
+
+.sidenav {
+  background-color: #f1f1f1;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.sidenav.left {
+  padding: 0px 10px 10px 10px;
+}
+
+.sidenav.right {
+  padding: 10px 10px 10px 10px;
+  background-color: #ffffff;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #AAAAAA;
+  width: 100%;
+}
+
+input[type=button] {
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  width: 100%;
+  background-color: #428bca;
+}
+
+#schoolSearchPanel {
+  padding: 10px 15px 5px 15px;
+}
+
+#schoolListSelect2Multiple {
+  width: 100%;
+  margin: 10px;
+}
+
+#keywordSearchPanel {
+  padding: 5px 15px 5px 15px;
+}
+
+#tagSearchPanel {
+  margin: 0px;
+  padding: 10px 5px 10px 0px;
+  max-height: calc(100% - 126px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.checkbox.domainTag {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.moreTagToggle {
+  padding: 0px;
+  margin: 0px;
+  text-align: right;
+}
+
+.subDomainTagList {
+  padding: 0px;
+  margin-left: 20px;
+  display: none;
+}
+
+.checkbox.subDomainTag {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.pageNo {
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #AAAAAA;
+  width: 80px;
+}
+
+#numberOfPage {
+  font-weight: normal;
+}
+
+#orderBy {
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #AAAAAA;
+  height: 36px;
+  width: 60%;
+}
+
+#searchResult {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 51px);
+}
+
+.paragraphItem {
+  margin-bottom: 10px;
+  padding: 10px;
+  height: auto;
+}
+
+.well:hover{
+  background-color: #fafafa;
+}
+
+.tagLabel {
+  padding: 0px 12px 0px 12px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 12px;
+  background-color: rgba(91, 192, 222, 0.25);
+  font-weight: normal;
+  cursor: pointer;
+  color: #0d47a1;
+/*  border-width: 1px;
+  border-color: #428bca;
+  border-style: solid;*/ 
+}
+
+.downloadBtn, .downloadBtn:hover, .downloadBtn:active, .downloadBtn:visited, .downloadBtn:focus{
+  width: 100%;
+  height: 36px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #428bca;
+  color: #FFFFFF;
+}
+
+#schoolPopup {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+}
+
+h1 {
+  font-size: 40pt;
+  letter-spacing: -1px;
+}
+
+#schoolDetailPopup {
+  margin: 0px;
+  width: 100%;
+  height: 50%;
+  padding: 10px 10px 10px 10px;
+  /*background: rgba(0,0,0,0.8);*/
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#closeSchoolPopup {
+  top: 18px;
+  right: 22px;
+  z-index: 100;
+  position: absolute;
+  cursor: pointer;
+}
+
+#schoolItemHeadPopup {
+  margin: 0px;
+  width: calc(100% - 17px);
+  height: 60px;
+  /*background: rgba(0,0,0,0.8);*/
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+#schoolItemPopup {
+  margin: 0px;
+  width: calc(100% - 9px);
+  height: calc(50% - 75px);
+  /*background: rgba(0,0,0,0.8);*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px 20px 20px 20px;
+
+}
+
+.marker_info .info {
+  width: 300px;
+  height: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(40, 117, 183, 0.9);
+  position: relative;
+  z-index: 9999999;
+}
+
+.marker_info .info h3 {
+  text-align: center;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.marker_info .info p {
+  font-weight: 100;
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+}
+
+.marker_info .info a {
+  font-weight: 100;
+  color: #FFFFFF;
+  text-align: right;
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
