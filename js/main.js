@@ -267,4 +267,24 @@ $('#orderBy').bind('change',function(){
 	search(1);
 });
 
+$(document).ready(function(){
+  $(window).resize();
+});
+
+$(window).resize(function(){
+  
+  $("span.select2.select2-container.select2-container--default").width(
+    $("#keywordSearch").width()
+    + 12
+  );
+
+  $("#tagSearchPanel").height(
+    $(".sidenav.left.fill-height").height()
+    - $("span.select2.select2-container.select2-container--default").height()
+    - $("#keywordSearch").height()
+    - $("#submitSearch").height()
+    - 70
+  );
+});
+
 myMap();
