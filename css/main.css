@@ -79,9 +79,9 @@ input[type=button] {
   padding: 10px 15px 5px 15px;
 }
 
-#schoolListSelect2Multiple {
-  width: 100%;
-  margin: 10px;
+ul.select2-selection__rendered {
+  height: 29px !important;
+  overflow-y: auto !important;
 }
 
 #keywordSearchPanel {
@@ -91,7 +91,6 @@ input[type=button] {
 #tagSearchPanel {
   margin: 0px;
   padding: 10px 5px 10px 0px;
-  max-height: calc(100% - 126px);
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
