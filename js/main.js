@@ -6,7 +6,12 @@ var infoBox;
 var subDomainTag = [];
 var currentPageNo;
 var orderby = ["order by file_uploaded_date DESC","order by file_uploaded_date ASC","order by download_time DESC","order by download_time ASC"];
-	  
+
+function preload() {
+    $("#loader").fadeToggle();
+    $("#searchResult").fadeToggle();
+}
+
 function moreTagToggle(domainTagNo) {
   if($("#subDomainTag" + domainTagNo + "List").css("display") == "none") {
     $("#moreTag" + domainTagNo + "Toggle").html("[-]");
@@ -32,6 +37,7 @@ function myMap() {
 }
 
 function search(pageNo) {
+  preload();
   currentPageNo = pageNo;
   schoolId = $("#schoolListSelect2Multiple").val();
   keywordSearch = $("#keywordSearch").val();
@@ -102,7 +108,10 @@ function getParagraphContent(){
       }
       $("#searchResult").html(text);
     },
-    async: false
+    async: false,
+    complete: function() {
+      preload();
+    }
   }); 
 	
 }

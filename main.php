@@ -52,7 +52,7 @@
             <li><a href="#">ติดต่อเรา</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="JavaScript: alert('open popup');"><span class="glyphicon glyphicon-log-in"></span> เข้าสู่ระบบ</a></li> -->
+            <!-- <li><a href="Javascript: waitingDialog.show();"><span class="glyphicon glyphicon-log-in"></span> เข้าสู่ระบบ</a></li> -->
           </ul>
         </div>
       </div>
@@ -160,9 +160,11 @@
               </select>
             </div>
 		      </div>
+          <div id="loader" style="display: none;"></div>
 		      <div id="searchResult">
             </br> กรุณาค้นหาจาก Tag ด้านซ้าย
           </div>
+
 
         </div>
 
