@@ -8,7 +8,7 @@ var currentPageNo;
 var orderby = ["order by file_uploaded_date DESC","order by file_uploaded_date ASC","order by download_time DESC","order by download_time ASC"];
 
 function preload() {
-    $("#loader").fadeToggle();
+    $("#loader1").fadeToggle();
     $("#searchResult").fadeToggle();
 }
 
@@ -37,7 +37,6 @@ function myMap() {
 }
 
 function search(pageNo) {
-  preload();
   currentPageNo = pageNo;
   schoolId = $("#schoolListSelect2Multiple").val();
   keywordSearch = $("#keywordSearch").val();
@@ -58,6 +57,9 @@ function getParagraphContent(){
       free_search:keywordSearch,
       orderby:orderby[$("#orderBy").val()],
       pageNo:currentPageNo
+    },
+    beforeSend: function() {
+      preload();
     },
     success: function(data) {
       //alert(data);
@@ -108,7 +110,7 @@ function getParagraphContent(){
       }
       $("#searchResult").html(text);
     },
-    async: false,
+    async: true,
     complete: function() {
       preload();
     }
@@ -124,6 +126,10 @@ function schoolPopupOpen(schoolId) {
     type: "POST",
     url: "service/query_schoolinfo_from_id.php",
     data: {school_id:schoolId
+    },
+    beforeSend: function() {
+      var text = '<div id="loader2" class="loader" style="display: block;"></div>';
+      $("#schoolPopup").html(text);
     },
     success: function(data) {
       jsonData = JSON.parse(data)[0];
@@ -168,7 +174,7 @@ function schoolPopupOpen(schoolId) {
 
       $("#schoolPopup").html(text);      
     },
-    async: false
+    async: true
   });
 
   $.ajax({
@@ -267,7 +273,7 @@ $('.checklist_tag :checkbox').bind('click', function() {
 });
 
 $('#pageNo').bind('keydown',function(){
-  if(event.keyCode == 13) {
+  if(event.keyCode == 13 || event.keyCode == 0 || event.keyCode == 229) {
     search($(this).val());       
   }
 });

@@ -148,7 +148,7 @@
         <div class="col-md-5 sidenav right fill-height" >
           <div class="row" style="margin: 0px; padding: 0px 0px 10px 0px; width: 100%;">
             <div class="col-xs-5" style="padding: 0px 0px 0px 0px; text-align: left;">
-              หน้า <input id="pageNo" class="pageNo" type="number" value="1" min="1" max="10" step="1"> จาก <label id="numberOfPage">0</label>
+              หน้า <input id="pageNo" class="pageNo" type="number" value="1" min="1" max="1" step="1"> จาก <label id="numberOfPage">0</label>
             </div>
             <div class="col-xs-7" style="padding: 0px; text-align: right;">
               เรียงลำดับ:
@@ -160,11 +160,10 @@
               </select>
             </div>
 		      </div>
-          <div id="loader" style="display: none;"></div>
+          <div id="loader1" class="loader" style="display: none;"></div>
 		      <div id="searchResult">
             </br> กรุณาค้นหาจาก Tag ด้านซ้าย
           </div>
-
 
         </div>
 

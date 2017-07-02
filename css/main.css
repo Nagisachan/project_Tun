@@ -271,7 +271,7 @@ h1 {
   cursor: pointer;
 }
 
-#loader {
+.loader {
   margin-top: 20px;
   margin-left: calc(50% - 32px);
   border: 16px solid #f3f3f3; /* Light grey */
